@@ -1,0 +1,211 @@
+/* CARD PEQUENO */
+.card {
+    box-shadow: 0px 0px 10px black;
+    padding: 3px;
+    padding-top: 10px;
+    border-radius: 10px;
+    width: 22rem;
+    height: 20rem;
+    position: relative;
+    animation: opacity 2s ease forwards;
+    color: white;
+}
+
+/* NOME E ID DO POKEMON */
+.pokemon-name-id {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    font-weight: bold;
+}
+.pokemon-name-id span,
+.pokemon-name-id h3 {
+    font-size: 24px;
+    text-shadow: 0px 3px 10px black;
+}
+
+/* POKEMON IMAGEM E TIPOS */
+.pokemonSprite {
+    place-items: center;
+    display: grid;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    top: 12%;
+    z-index: 10;
+}
+.pokemonSprite img {
+    max-width: 110%;
+    width: 100%;
+}
+.pokemonType,
+.pokemonTypeGame {
+    display: flex;
+    gap: 10px;
+}
+.pokemonType span,
+.pokemonTypeGame span {
+    padding: 2px 5px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: white;
+    box-shadow: 0px 2px 4px black;
+    text-shadow: 0px 3px 10px black;
+    font-weight: bold;
+}
+.none {
+    display: none;
+}
+
+/* TESTE POKEMONS NO HTML */
+.pokemon-list1,
+.pokemon-list2 {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* ---------------- CARD INPUT SEARCH E BUTTON RANDOM ---------------- */
+/* CARD GRANDE */
+.pokemon-input-card,
+.pokemon-game-card {
+    box-shadow: 0px 0px 10px black;
+    padding-top: 10px;
+    border-radius: 10px 10px 0 0;
+    width: 22rem;
+    height: 31rem;
+    background: #b6b6b6;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    overflow: hidden;
+    margin: 0 auto;
+    transition: background 800ms, transform 200ms ease;
+    transform-origin: center center;
+}
+.pokemon-name-id.inputCard,
+.inputCardGame {
+    align-items: center;
+    color: white;
+    height: fit-content;
+}
+.background-circle {
+    background: #f5f5f5;
+    border-radius: 100%;
+    height: 230%;
+    width: 200%;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translatex(-50%);
+    box-shadow: 0px 0px 10px black;
+}
+
+/* WHO IS THAT POKEMON */
+.loadIMG,
+.gameIMG {
+    filter: brightness(0);
+}
+.loadIMG:hover {
+    transition: all 1s;
+    filter: brightness(0.75);
+}
+
+.loadedIMG {
+    transition: transform 500ms;
+}
+
+.gameIMG {
+    cursor: not-allowed;
+    user-select: none;
+}
+
+.gameIMG.exibir {
+    transition: all 300ms ease-out;
+    filter: brightness(1);
+    cursor: initial;
+}
+
+.gameIMG.exibir:hover,
+.pokemon-input-card:hover .loadedIMG,
+.acerto {
+    transform: scale(1.2) translateY(-20px);
+}
+
+.contadorGame {
+    color: white;
+}
+
+
+/* STATS E BARRA DE PROGRESSÃO */
+.about,
+.aboutGame {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 5px;
+    background: #f5f5f5;
+    padding: 20px 35px;
+    transition: all 1s;
+    z-index: 1;
+}
+.about h3,
+.aboutGame h3 {
+    align-self: center;
+}
+.stats {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.stats h6 {
+    font-size: 14px;
+    width: 4ch;
+}
+.stats-bar,
+.stats-barGame {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.stats-bar::before,
+.stats-barGame::before {
+    content: "";
+    position: absolute;
+    height: 6px;
+    background-color: #b6b6b6;
+    width: 220px;
+    z-index: -1;
+    border-radius: 10px;
+}
+.stats-bar-progress,
+.stats-bar-progressGame {
+    border-radius: 10px;
+    width: 110px;
+    height: 6px;
+    background-color: black;
+    position: absolute;
+    transition: all 1s;
+    z-index: 10;
+}
+
+.stats-bar-progressGame {
+    width: 110px;
+}
+
+@media screen and (min-width: 1700px) {
+    .searching-page > .container > .pokemon-input-card{
+        transform: scale(1.3);
+    }
+    
+}
+
+
+.pokemonSprite.center{
+    top: 50%;
+    transform: translate(-50%,-50%);
+}

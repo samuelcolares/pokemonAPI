@@ -1,0 +1,248 @@
+/* ---------------- Importação de fonte ---------------- */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap");
+@import url(pokemon-cards.css);
+@import url(landing-page.css);
+@import url(searchPokemon-page.css);
+@import url(generation-page.css);
+@import url(mini-game.css);
+@import url(team-page.css);
+@import url(footer.css);
+/* ---------------- :ROOT, BACKGROUND E COLORS ---------------- */
+:root {
+    --Bug: #a7b723;
+    --Dark: #75574c;
+    --Dragon: #7037ff;
+    --Electric: #f3c520;
+    --Fairy: #e69eac;
+    --Fighting: #c12239;
+    --Fire: #f57d31;
+    --Flying: #a891ec;
+    --Ghost: #70559b;
+    --Normal: #aaa67f;
+    --Grass: #1e5b37;
+    --Ground: #dec16b;
+    --Ice: #9ad6df;
+    --Poison: #773283;
+    --Psychic: #fb5584;
+    --Rock: #b69e31;
+    --Steel: #b7b9d0;
+    --Water: #4c83e9;
+}
+
+.bug {
+    background: var(--Bug) !important;
+    background-image: url(../img/bug.jpg) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-blend-mode: luminosity;
+}
+
+.dark {
+    background: var(--Dark) !important;
+    background-image: url(../img/dark.jpeg) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-blend-mode: luminosity;
+}
+
+.dragon {
+    background: var(--Dragon) !important;
+    background-image: url(../img/dragonType.webp) !important;
+    background-size: cover !important;
+    /* background-position: center center!important; */
+    background-blend-mode: luminosity;
+}
+
+.electric {
+    background: rgba(249, 207, 48, 0.6) !important;
+    background-image: url(../img/yellow.webp) !important;
+    background-size: cover !important;
+    background-blend-mode: overlay;
+}
+
+.fairy {
+    background: var(--Fairy) !important;
+    background-image: url(../img/fairy.jpg) !important;
+    background-size: cover !important;
+}
+
+.fighting {
+    background: rgb(193 34 57 / 60%) !important;
+    background-image: url(../img/fight.jpeg) !important;
+    background-size: cover !important;
+    background-blend-mode: luminosity;
+}
+
+.fire {
+    background-color: var(--Fire) !important;
+    background-image: url(../img/1233.jpg) !important;
+    background-size: cover !important;
+    background-blend-mode: soft-light;
+}
+
+.flying {
+    background: var(--Flying) !important;
+    background-image: url(../img/flying.jpg) !important;
+    background-size: cover !important;
+    background-position: top right !important;
+    background-blend-mode: luminosity;
+}
+
+.ghost {
+    background: var(--Ghost) !important;
+    background-image: url(../img/ghost.jpg) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-blend-mode: soft-light;
+}
+
+.normal {
+    background: var(--Normal) !important;
+    background-image: url(../img/normal.jpg) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-blend-mode: luminosity;
+}
+
+.grass {
+    background: var(--Grass) !important;
+    background-image: url(../img/grass2.jpeg) !important;
+    background-size: cover !important;
+    background-blend-mode: soft-light;
+}
+
+.ground {
+    background: var(--Ground) !important;
+    background-image: url(../img/ground.webp) !important;
+    background-size: cover !important;
+    background-blend-mode: soft-light;
+}
+
+.ice {
+    background: var(--Ice) !important;
+    background-image: url(../img/ice.webp) !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-blend-mode: multiply;
+}
+
+.poison {
+    background: rgba(119, 50, 131, 0.6) !important;
+    background-image: url(../img/poison.jpg) !important;
+    background-size: cover !important;
+    background-blend-mode: hard-light;
+}
+
+.psychic {
+    background: var(--Psychic) !important;
+    background-image: url(../img/psychic.jpg) !important;
+    background-size: cover !important;
+    background-blend-mode: luminosity;
+}
+
+.rock {
+    background: #b69e31ba !important;
+    background-image: url(../img/rocktype2.jpeg) !important;
+    background-size: cover !important;
+    background-position: top center !important;
+    background-blend-mode: luminosity;
+}
+
+.steel {
+    background: var(--Steel) !important;
+    background-image: url(../img/steel.jpg) !important;
+    background-size: cover !important;
+    background-position: top center !important;
+    background-blend-mode: multiply;
+}
+
+.water {
+    background: var(--Water) !important;
+    background-image: url(../img/waterType.jpg) !important;
+    background-size: cover !important;
+    background-blend-mode: soft-light;
+}
+
+.bugColor {
+    color: var(--Bug);
+}
+
+.darkColor {
+    color: var(--Dark);
+}
+
+.dragonColor {
+    color: var(--Dragon);
+}
+
+.electricColor {
+    color: var(--Electric);
+}
+
+.fairyColor {
+    color: var(--Fairy);
+}
+
+.fightingColor {
+    color: var(--Fighting);
+}
+
+.fireColor {
+    color: var(--Fire);
+}
+
+.flyingColor {
+    color: var(--Flying);
+}
+
+.ghostColor {
+    color: var(--Ghost);
+}
+
+.normalColor {
+    color: var(--Normal);
+}
+
+.grassColor {
+    color: var(--Grass);
+}
+
+.groundColor {
+    color: var(--Ground);
+}
+
+.iceColor {
+    color: var(--Ice);
+}
+
+.poisonColor {
+    color: var(--Poison);
+}
+
+.psychicColor {
+    color: var(--Psychic);
+}
+
+.rockColor {
+    color: var(--Rock);
+}
+
+.steelColor {
+    color: var(--Steel);
+}
+
+.waterColor {
+    color: var(--Water);
+}
+
+/* ---------------- Reset CSS básico ---------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Sora";
+}
+
+html{
+    scroll-behavior: smooth;
+}

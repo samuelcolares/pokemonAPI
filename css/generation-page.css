@@ -1,0 +1,167 @@
+.generation-page {
+    min-height: 100vh;
+    background-image: url(../img/backgroundGeneration.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    font-family: "Inter";
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.generation-page .container {
+    padding: 0 10%;
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+
+.generation-page__logo {
+    max-width: 70rem;
+    width: 40%;
+    margin: 3rem auto;
+    display: block;
+}
+
+.generation-page__pokemon {
+    width: 300px;
+    top: 0;
+    right: 0;
+}
+
+.generation-page__about {
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    margin: 100px 0;
+}
+
+.generationI-page__toggle-bar,
+.generationII-page__toggle-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(30, 91, 55);
+    justify-content: center;
+    margin-top: 4rem;
+    position: relative;
+    gap: 20px;
+    padding: 20px 0;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(30,91,55,0.7);
+}
+.generationII-page__toggle-bar {
+    background-color: rgb(245, 125, 49);
+    box-shadow: 0 0 10px rgba(245, 125, 49,0.7);
+}
+
+.pokemon-list1,
+.pokemon-list2 {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, transform 5s ease, filter 7s ease;
+    transform: translateY(-110%);
+    filter: opacity(0);
+}
+
+
+.generationI.expanded .pokemon-list1,
+.generationII.expanded .pokemon-list2 {
+    max-height: fit-content;
+    transform: translateY(0px) !important;
+    filter: opacity(1);
+}
+
+.toggle-bar__arrow {
+    width: 15px;
+    transform: rotate(180deg);
+    transition: transform 300ms;
+    user-select: none;
+}
+
+.generationI.expanded .toggle-bar__arrow, .generationII.expanded .toggle-bar__arrow {
+    transform: rotate(0deg);
+}
+
+.toggle-bar__pokemons {
+    width: 250px;
+    position: absolute;
+    top: -70%;
+    right: 3%;
+    user-select: none;  
+    transform: translateY(-25%);
+}
+
+.toggle-bar__text {
+    font-size: 20px;
+    color: white;
+    user-select: none;
+    font-weight: 700;
+}
+
+.generation-wrapper{
+    overflow: hidden;
+}
+
+.returnTop_generation-page{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    height: 100px;
+    width: 50px;
+    background-image: url(../img/meow-button.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(12, 19, 33);
+    border-radius: 20px;
+    border-color: rgb(8, 14, 26);
+    transition: all 0.4s;
+    opacity: 0;
+    transform: skew(10deg, 10deg);
+}
+.returnTop_generation-page.visible{
+    opacity: 1;
+    transition: transform .4s ease-in-out, opacity 1.5s ease;
+    transform: skew(0deg, 0deg);
+    animation: backgroundButtonAnimation 1s linear forwards;
+}
+.returnTop_generation-page:active{
+    transform: scale(0.8);
+}
+.returnTop_generation-page.second{
+    background-image: url(../img/togepi-button.png);
+}
+
+
+@keyframes backgroundButtonAnimation{
+    0%{
+        background-position: bottom -1000% center;
+    }
+    100%{
+        background-position: center center;
+    }
+}
+.changeGeneration{
+    background-color: rgb(245, 125, 49);
+    box-shadow: 0 0 10px rgba(245, 125, 49,0.7);
+    border: none;
+    padding: 20px;
+    border-radius: 20px;
+    font: inherit;
+    color: white;
+    font-weight: 700;
+    opacity: 0.8;
+    transition: .4s;
+}
+
+.changeGeneration:hover{
+    opacity: 1;
+}
+
+.changeGeneration:active{
+    transform: scale(0.9);
+}

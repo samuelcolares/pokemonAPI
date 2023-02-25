@@ -1,0 +1,141 @@
+/* PÁGINA INICIAL */
+
+.landing-page {
+    background-image: url(../img/background-landing-page.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    font-family: "Inter";
+    color: white;
+    padding-bottom: 3rem;
+}
+
+.landing-page .container {
+    padding: 0 15%;
+    min-height: 100vh;
+    background-image: url(../img/red-trainer.png);
+    background-size: 350px;
+    background-repeat: no-repeat;
+    background-position: left 20px bottom 10px;
+}
+
+.landing-page .landing-page__logo {
+    display: block;
+    margin: 0 auto;
+    padding: 3rem 0;
+    max-width: 400px;
+}
+
+.landing-page__subtitle {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    max-width: 30ch;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.landing-page__subtitle2 {
+    font-size: 22px;
+    text-align: center;
+    max-width: 50ch;
+    margin: 0 auto;
+}
+
+.container-button {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.landing-page__button {
+    text-decoration: none;
+    padding: 40px 120px 40px 30px;
+    color: white;
+    background-color: firebrick;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr 30px;
+    border-radius: 20px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+    font-family: "Sora";
+    font-size: 20px;
+}
+
+.landing-page__button:hover .button-icon {
+    transform: scale(1.2);
+}
+
+.landing-page__button:active {
+    transform: scale(0.98);
+}
+
+.button-icon {
+    width: 150px;
+    filter: drop-shadow(0px 0px 10px black);
+    transition: 1s all;
+}
+
+.pesquisar-pokemon {
+    background-color: rgb(142, 81, 93);
+    background-image: url(../img/search-icon.svg);
+    background-repeat: no-repeat;
+    background-position: left 20px center;
+    background-size: 25px;
+    box-shadow: 0px 0px 10px rgba(142, 81, 93, 0.6);
+}
+
+.pesquisar-pokemon,
+.jogar-quiz,
+.primeira-geracao,
+.segunda-geracao,
+.pokemon-aleatorio {
+    position: relative;
+}
+
+.mew,
+.charizard,
+.bulbasaur,
+.cyndaquil,
+.pikachu {
+    position: absolute;
+    bottom: 10%;
+    left: 60%;
+}
+
+.jogar-quiz {
+    background-image: url(../img/pokeball.svg);
+    background-repeat: no-repeat;
+    background-position: left 20px center;
+    background-size: 25px;
+    background-color: rgb(112, 85, 155);
+    box-shadow: 0px 0px 10px rgb(112, 85, 155, 0.6);
+}
+
+.jogar-quiz span, .pesquisar-pokemon span {
+    margin-left: 40px;
+}
+
+.primeira-geracao{
+    background-color: rgb(30, 91, 55);
+    box-shadow: 0px 0px 10px rgb(30, 91, 55, 0.6);
+}
+
+.segunda-geracao{
+    background-color: rgb(245, 125, 49);
+    box-shadow: 0px 0px 10px rgb(245, 125, 49, 0.6);
+    margin: 0 1rem;
+}
+
+.pokemon-aleatorio{
+    padding-right: 60px;
+    background: rgb(177, 141, 55);
+    box-shadow: 0px 0px 10px rgb(177, 141, 55, 0.6);
+}
+
+.pikachu{
+    left: 70%;
+}

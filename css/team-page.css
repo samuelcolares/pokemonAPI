@@ -1,0 +1,71 @@
+.team-page {
+    min-height: 100vh;
+    background-image: url(../img/backgroundGeneration.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: "Inter";
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.team-page .container {
+    padding: 0 15%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.team-page__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.team-page__about {
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    margin: 100px 0;
+}
+
+.team-page__toggle-bar{
+    width: 50%;
+    margin: 2rem auto;
+    background: rgb(177, 141, 55);
+    box-shadow: 0px 0px 10px rgb(177, 141, 55, 0.6);
+    position: relative;
+    padding: 20px 0;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    transition: 1.5s;
+}
+
+.team-page__toggle-bar.fullsize{
+    width: 100%;
+}
+
+.pokemon-list3{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    row-gap: 30px;
+}
+
+.team-page__toggle-bar.fullsize + .pokemon-list3{
+    animation: opacity 2.5s forwards;
+}
+
+@keyframes opacity {
+    0%{
+        filter: opacity(0);
+    }100%{
+        filter: opacity(1);
+    }
+}

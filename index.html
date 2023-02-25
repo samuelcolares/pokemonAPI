@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedéx API</title>
+    <link rel="shortcut icon" href="img/masterballFavIcon.png" type="image/x-icon">
+    <script src="js/script.js" defer></script>
+    <script src="js/script2.js" defer></script>
+    <script src="js/script3.js" defer></script>
+    <script src="js/script4.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header class="landing-page" id="landing-page">
+
+        <div class="container">
+            <h1>
+                <img src="img/image 17.svg" alt="" class="landing-page__logo">
+            </h1>
+
+            <h2 class="landing-page__subtitle">
+                Take a nostalgic journey back to the 90s with the first two generations of Pokémon.
+            </h2>
+
+            <h4 class="landing-page__subtitle2">
+                Navigate through pages, search for your favorite Pokémon, test your knowledge in a mini-game, or
+                discover your Pokémon team of six, all with just one click.
+            </h4>
+
+            <nav class="container-button">
+                <a href="#searching-page" class="landing-page__button pesquisar-pokemon">
+                    <span>Search Pokémon</span>
+                    <img src="img/mew.png" alt="mew-primeira-geração-id-151" class="button-icon mew">
+                </a>
+
+                <a href="#mini-game" class="landing-page__button jogar-quiz">
+                    <span>Play Mini-Game</span>
+                    <img src="img/charizard.png" alt="charizard-primeira-geração-id-006" class="button-icon charizard">
+                </a>
+            </nav>
+
+            <nav class="container-button">
+                <a href="#generation-page" class="landing-page__button primeira-geracao">
+                    Generation I
+                    <img src="img/bulbasaur.png" alt="charizard-primeira-geração-id-006" class="button-icon bulbasaur">
+                </a>
+
+                <a href="#generation-page" class="landing-page__button segunda-geracao">
+                    Generation II
+                    <img src="img/cindaquil.png" alt="charizard-primeira-geração-id-006" class="button-icon cyndaquil">
+                </a>
+
+                <a href="#team-page" class="landing-page__button pokemon-aleatorio">
+                    Discover Your Team
+                    <img src="img/pikachu.png" alt="charizard-primeira-geração-id-006" class="button-icon pikachu">
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="searching-page" id="searching-page">
+
+        <div class="container">
+            <nav class="searching-page__header">
+                <img src="img/pokemon-logo.png" alt="" class="searching-page__logo">
+
+                <a href="#landing-page" class="back-button">
+                    <img src="img/arrow.svg" alt="">
+                    Home
+                </a>
+
+                <input type="text" name="" id="inputText" placeholder="Search Pokémon" class="searching-page__input">
+
+                <button id="randomPokemonCard" class="searching-page__random">
+                    <img src="img/random.svg" alt="">
+                    Random
+                </button>
+
+                <a href="#mini-game" class="searching-page__quiz-button">
+                    <img src="img/pokeball.svg" alt="">
+                    Mini-game
+                </a>
+            </nav>
+
+            <div class="pokemon-input-card type">
+
+                <div class="pokemon-name-id inputCard">
+                    <h3>POKÉMON</h3>
+                    <span># ID</span>
+                </div>
+
+                <div class="background-circle"></div>
+
+                <div class="pokemonSprite">
+                    <img src="#" alt="Quem é este pokémon?" id="pokemonImage" class="loadIMG">
+
+                    <div class="pokemonType">
+                        <span style="color: black;">TYPE 1</span>
+                        <span style="color: black;">TYPE 2</span>
+                    </div>
+                </div>
+
+                <div class="about type">
+                    <h3>Base Stats</h3>
+
+                    <div class="stats">
+                        <h6>HP</h6>
+                        <div class="stats-bar">
+                            <div class="stats-bar-progress HP type"></div>
+                        </div>
+                    </div>
+
+                    <div class="stats">
+                        <h6>ATK</h6>
+                        <div class="stats-bar">
+                            <div class="stats-bar-progress ATK type"></div>
+                        </div>
+                    </div>
+
+                    <div class="stats">
+                        <h6>DEF</h6>
+                        <div class="stats-bar">
+                            <div class="stats-bar-progress DEF type"></div>
+                        </div>
+                    </div>
+
+                    <div class="stats">
+                        <h6>SATK</h6>
+                        <div class="stats-bar">
+                            <div class="stats-bar-progress SATK type"></div>
+                        </div>
+                    </div>
+
+                    <div class="stats">
+                        <h6>SDEF</h6>
+                        <div class="stats-bar">
+                            <div class="stats-bar-progress SDEF type"></div>
+                        </div>
+                    </div>
+
+                    <div class="stats">
+                        <h6>SPD</h6>
+                        <div class="stats-bar">
+                            <div class="stats-bar-progress SPD type"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <button id="next" class="searching-page__button next">
+                <img src="img/arrow.svg" alt="Next Pokémon">
+            </button>
+
+            <button id="prev" class="searching-page__button prev" disabled>
+                <img src="img/arrow.svg" alt="Previous Pokémon">
+            </button>
+        </div>
+    </section>
+
+    <section class="generation-page" id="generation-page">
+        <div class="container">
+
+            <h2><img src="img/Generation-I.png" alt="" class="generation-page__logo"></h2>
+
+            <p class="generation-page__about">The first generation of Pokémon, often referred to as Generation I, was
+                released in Japan in 1996 and internationally in 1998. It introduced a total of 151 Pokémon species,
+                including iconic characters such as Pikachu, Charmander, and Squirtle. The gameplay involved training
+                and battling Pokémon, collecting gym badges, and ultimately becoming the Champion of the Pokémon League.
+                The first generation games, Pokémon Red, Blue, and Green, were released for the Game Boy and have since
+                become a beloved cultural phenomenon with a lasting impact on gaming and pop culture.
+            </p>
+            <button type="button" id="changeGeneration" class="changeGeneration">Change to Generation II</button>
+            <div class="generationI">
+
+                <div class="generationI-page__toggle-bar">
+                    <img src="img/down-arrow.svg" alt="" class="toggle-bar__arrow">
+                    <img src="img/first-generation-pokemons.png" alt="" class="toggle-bar__pokemons"> <span
+                        class="toggle-bar__text">Show Generation-I Pokémons</span>
+                </div>
+                <div class="generation-wrapper">
+                    <div class="pokemon-list1"></div>
+                </div>
+
+            </div>
+            <div class="generationII none">
+
+                <div class="generationII-page__toggle-bar">
+
+                    <img src="img/down-arrow.svg" alt="" class="toggle-bar__arrow">
+                    <span class="toggle-bar__text">Show Generation-II Pokémons</span>
+                    <img src="img/second-generation-pokemons.png" alt="" class="toggle-bar__pokemons">
+
+                </div>
+                <div class="generation-wrapper">
+                    <div class="pokemon-list2">
+                    </div>
+                </div>
+
+            </div>
+
+            <button type="button" id="returnTop_generation-page" class="returnTop_generation-page none"></button>
+        </div>
+    </section>
+
+    <section class="mini-game" id="mini-game">
+
+        <div class="container">
+            <nav class="game-page__header">
+                <img src="img/Whos-That-Pokemon.png" alt="" class="game-page__logo">
+
+                <a href="#landing-page" class="back-button">
+                    <img src="img/arrow.svg" alt="">
+                    Home
+                </a>
+                <p class="contadorGame">
+                    Score:
+                    <span id="contadorGame">0</span>
+                </p>
+            </nav>
+            <div class="mini-game__rules">
+                <img src="img/Rules.png" alt="" class="game-rules-image">
+                <p class="game-rules-text">
+                    1. The game will show you a black filled image of a Pokémon. Your goal is to correctly guess the
+                    name of the Pokémon by typing in the input and pressing enter.
+                    <br><br>
+                    2. You can make a maximum of 3 guesses per game. After that, the game will end and reveal the hidden
+                    Pokémon.
+                    <br><br>
+                    3. To make a guess, click on the pokeball and type in your answer in the input field and press
+                    enter. The game will tell you if your guess is correct or not.
+                    <br><br>
+                    4. If you guess the Pokémon correctly, you win the game!
+                    <br><br>
+                    5. The game will keep track of your score. See how many Pokémon you can guess correctly!
+                    <br><br>
+                </p>
+                <p class="game-rules-text">Have fun and good luck!</p>
+
+            </div>
+
+            <div id="whosIsThatPokemon">
+                <input type="text" id="pokemonInputGame" class="inputGame">
+                <div class="pokemon-game-card type">
+                    <div class="pokemon-name-id inputCardGame">
+                        <h3>POKEMON</h3>
+                        <span># ID</span>
+                    </div>
+                    <div class="background-circle"></div>
+                    <div class="pokemonSprite">
+                        <img src="#" alt="Quem é este pokémon?" id="pokemonImageGame" class="gameIMG">
+                        <div class="pokemonTypeGame">
+                            <span style="color: black;">TYPE 1</span>
+                            <span style="color: black;">TYPE 2</span>
+                        </div>
+                    </div>
+                    <div class="aboutGame type">
+                        <h3>Base Stats</h3>
+                        <div class="stats">
+                            <h6>HP</h6>
+                            <div class="stats-barGame">
+                                <div class="stats-bar-progressGame HPGame type"></div>
+                            </div>
+                        </div>
+                        <div class="stats">
+                            <h6>ATK</h6>
+                            <div class="stats-barGame">
+                                <div class="stats-bar-progressGame ATKGame type"></div>
+                            </div>
+                        </div>
+                        <div class="stats">
+                            <h6>DEF</h6>
+                            <div class="stats-barGame">
+                                <div class="stats-bar-progressGame DEFGame type"></div>
+                            </div>
+                        </div>
+                        <div class="stats">
+                            <h6>SATK</h6>
+                            <div class="stats-barGame">
+                                <div class="stats-bar-progressGame SATKGame type"></div>
+                            </div>
+                        </div>
+                        <div class="stats">
+                            <h6>SDEF</h6>
+                            <div class="stats-barGame">
+                                <div class="stats-bar-progressGame SDEFGame type"></div>
+                            </div>
+                        </div>
+                        <div class="stats">
+                            <h6>SPD</h6>
+                            <div class="stats-barGame">
+                                <div class="stats-bar-progressGame SPDGame type"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="restartGame">Restart Game</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="team-page" id="team-page">
+
+        <div class="container">
+            <nav class="searching-page__header">
+                <img src="img/Discover-your-Team.png" alt="" class="team-page__logo">
+
+                <a href="#landing-page" class="back-button">
+                    <img src="img/arrow.svg" alt="">
+                    Home
+                </a>
+            </nav>
+
+            <p class="team-page__about">Welcome to the Random Team Generator! Here you can press a button to generate a
+                team of 6 random Pokémon to use in your adventures.
+                <br> <br>
+                To generate your team, simply press the "Generate Team" button. The system will randomly select 6
+                Pokémon from the first two generations and display them on the screen.
+                <br><br>
+                If you don't like the Pokémon that were generated, don't worry! You have two chances to change your
+                team. Simply click the "Change Team" button and the system will generate a new set of 6 Pokémon. You can
+                do this a maximum of two times.
+            </p>
+            <!-- <button id="randomPokemonDeck">Generate Team</button> -->
+            <div class="team-page-random">
+
+                <button class="team-page__toggle-bar" id="randomPokemonDeck">
+                    Generate Team
+                </button>
+                <div class="pokemon-list3"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <a href="https://github.com/samuelcolares"><img src="img/sam-p.png" alt="" class="footer__link-img">
+        </a>
+        <span class="footer__text">
+            This website was designed and developed by <a href="https://samuelcolares.github.io/" class="samuel-link">Samuel Colares</a>, a front-end developer, and <a
+                href="https://www.linkedin.com/in/vitoriagomys/" class="vitoria-link">Vitória Gomys</a>, a UI/UX designer.
+            <br><br>
+            Copyright © 2023. All rights reserved.
+        </span>
+        <a href="https://www.linkedin.com/in/vitoriagomys/"><img src="img/vit-p.png" alt="" class="footer__link-img">
+        </a>
+    </footer>
+</body>
+
+</html>

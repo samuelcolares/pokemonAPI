@@ -1,0 +1,73 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    text-align: center;
+    /* background: url(../img/sam-p.png) no-repeat left center, url(../img/vit-p.png) no-repeat right center; */
+    background-color: rgb(12, 19, 33);
+    /* background-size: contain; */
+}
+
+.footer__link-img{
+    width: 70px;
+}
+.footer__link-img:active{
+    transform: scale(0.9);
+}
+
+
+.footer__text a{
+    text-decoration: none;
+    color: wheat;
+    transition: .4s;
+}
+
+.footer__text .samuel-link:hover{
+    position: relative;
+    color: rgb(75, 190, 223);
+}
+
+.footer__text .vitoria-link:hover{
+    position: relative;
+    color: rgb(241, 134, 10);
+}
+
+.footer__text .samuel-link::before{
+    content: '';
+    height: 1px;
+    width: 0%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:rgb(75, 190, 223);
+    transition: 1s;
+}
+
+
+.samuel-link:hover::before {
+    width: 99%;
+}
+
+.footer__text .vitoria-link::before{
+    content: '';
+    height: 1px;
+    width: 0%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right:  50%;
+    transform: translateX(50%);
+    background-color: rgb(241, 134, 10);
+    transition: 1s;
+}
+
+.vitoria-link:hover::before{
+    width: 99%;
+}
+
+
+.footer__text{
+    margin-top: 4px;
+}
