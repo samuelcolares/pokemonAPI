@@ -71,3 +71,21 @@
 .footer__text{
     margin-top: 4px;
 }
+
+@media screen and (max-width: 1080px) {
+    .footer{
+       display: grid;
+       grid-template-columns: repeat(2, auto);
+       gap: 10px;
+       padding: 0.5rem 5%;
+    }
+
+    .footer__text{
+        order: -1;
+        grid-column: span 2;
+    }
+    .footer a:first-of-type{
+        justify-self: end;
+    }
+    
+}

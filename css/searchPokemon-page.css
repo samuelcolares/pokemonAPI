@@ -7,7 +7,6 @@
     position: relative;
     font-size: 20px;
     font-weight: 700;
-    padding-top: 2rem;
 }
 
 .searching-page .container {
@@ -38,6 +37,11 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+    margin-top: 2rem;
+}
+
+.searching-page__header > .back-button{
+    order: -1;
 }
 
 .searching-page__logo {
@@ -84,11 +88,20 @@
     align-items: center;
     gap: 15px;
     color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .back-button > img {
     width: 10px;
+    transition: 0.3s;
 }
+
+.back-button:hover img{
+    margin-right: 5px;
+}
+
 
 .searching-page__input {
     background-color: rgb(142, 81, 93);
@@ -128,6 +141,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    border: none;
 }
 
 .searching-page__quiz-button:active, .searching-page__random:active{
@@ -167,4 +181,74 @@
 .searching-page__input:focus::placeholder{
     color: white;
     transition: color 0.5s ease 0.5s;
+}
+
+@media screen and (max-width: 1080px) {
+    .searching-page {
+        min-height: 100vh;
+        
+    }
+    
+    .searching-page .container {
+        padding: 0 5%;
+        min-height: 100vh;
+        background-image: none;
+        /* place-items: initial;
+        place-content: center; */
+    }
+
+    .searching-page__header {
+        display: grid;
+        place-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .searching-page__logo {
+        max-width: 150px;
+    }
+
+    .searching-page__input {
+        order: 2;
+        grid-column: span 3;
+    }
+
+    .searching-page__random{
+        position: absolute;
+        bottom: 3%;
+    }
+
+
+    .searching-page__input::placeholder {
+       margin-right: 1rem;
+    }
+
+
+    .searching-page__quiz-button{
+        display: none;
+        
+    }
+
+    .searching-page__button {
+        top: initial;
+        bottom: 3%;
+        width: fit-content;
+        height: 65px;
+        max-width: 25px;
+    }
+
+    .searching-page__button.next {
+        right: 10%;
+        transform: scaleX(-1);
+    }
+    
+    .searching-page__button.prev {
+        left: 10%;
+    }
+    .pokemon-input-card{
+        align-self: self-start;
+        margin-top: 2rem;
+    }
 }

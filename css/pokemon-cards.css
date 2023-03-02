@@ -142,8 +142,8 @@
 
 
 /* STATS E BARRA DE PROGRESSÃO */
-.about,
-.aboutGame {
+.pokemonInfo,
+.pokemonInfoGame {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
@@ -153,8 +153,8 @@
     transition: all 1s;
     z-index: 1;
 }
-.about h3,
-.aboutGame h3 {
+.pokemonInfo h3,
+.pokemonInfoGame h3 {
     align-self: center;
 }
 .stats {
@@ -202,6 +202,12 @@
         transform: scale(1.3);
     }
     
+}
+
+@media screen and (max-width: 1080px){
+    /* .pokemon-input-card{
+        transform: scale(0.9);
+    } */
 }
 
 

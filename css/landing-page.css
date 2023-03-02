@@ -63,6 +63,8 @@
     text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
     font-family: "Sora";
     font-size: 20px;
+    border: none;
+    cursor: pointer;
 }
 
 .landing-page__button:hover .button-icon {
@@ -90,8 +92,8 @@
 
 .pesquisar-pokemon,
 .jogar-quiz,
-.primeira-geracao,
-.segunda-geracao,
+.first-generation,
+.second-generation,
 .pokemon-aleatorio {
     position: relative;
 }
@@ -103,7 +105,7 @@
 .pikachu {
     position: absolute;
     bottom: 10%;
-    left: 60%;
+    right: 0;
 }
 
 .jogar-quiz {
@@ -115,27 +117,80 @@
     box-shadow: 0px 0px 10px rgb(112, 85, 155, 0.6);
 }
 
-.jogar-quiz span, .pesquisar-pokemon span {
+.jogar-quiz span,
+.pesquisar-pokemon span {
     margin-left: 40px;
 }
 
-.primeira-geracao{
+.first-generation {
     background-color: rgb(30, 91, 55);
     box-shadow: 0px 0px 10px rgb(30, 91, 55, 0.6);
 }
 
-.segunda-geracao{
+.second-generation {
     background-color: rgb(245, 125, 49);
     box-shadow: 0px 0px 10px rgb(245, 125, 49, 0.6);
     margin: 0 1rem;
 }
 
-.pokemon-aleatorio{
+.pokemon-aleatorio {
     padding-right: 60px;
     background: rgb(177, 141, 55);
     box-shadow: 0px 0px 10px rgb(177, 141, 55, 0.6);
 }
 
+.cyndaquil{
+    bottom: 25%;
+}
+
 .pikachu{
-    left: 70%;
+    right: -20%;
+}
+
+@media screen and (max-width: 1080px) {
+    .landing-page .container {
+        padding: 0 5%;
+        background-image: none;
+    }
+
+    .landing-page .landing-page__logo {
+        max-width: 250px;
+    }
+
+    .landing-page__subtitle {
+        font-size: 22px;
+    }
+
+    .landing-page__subtitle2 {
+        font-size: 16px;
+    }
+
+    .container-button {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .landing-page__button {
+        text-decoration: none;
+        padding: 30px 80px 30px 20px;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .button-icon {
+        width: 120px;
+    }
+    .pesquisar-pokemon {
+        background-size: 35px;
+    }
+    .jogar-quiz {
+        background-size: 35px;
+    }
+    .second-generation {
+        margin: 0;
+    }
+    .pikachu{
+        right: 0;
+    }
+    
 }

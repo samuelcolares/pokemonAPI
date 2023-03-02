@@ -9,8 +9,6 @@
     <link rel="shortcut icon" href="img/masterballFavIcon.png" type="image/x-icon">
     <script src="js/script.js" defer></script>
     <script src="js/script2.js" defer></script>
-    <script src="js/script3.js" defer></script>
-    <script src="js/script4.js" defer></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -33,32 +31,32 @@
             </h4>
 
             <nav class="container-button">
-                <a href="#searching-page" class="landing-page__button pesquisar-pokemon">
+                <button type="button" class="landing-page__button pesquisar-pokemon">
                     <span>Search Pokémon</span>
-                    <img src="img/mew.png" alt="mew-primeira-geração-id-151" class="button-icon mew">
-                </a>
+                    <img src="img/mew.png" alt="mew-genenartionI-id-151" class="button-icon mew">
+                </button>
 
-                <a href="#mini-game" class="landing-page__button jogar-quiz">
+                <button type="button" class="landing-page__button jogar-quiz goTo-Game">
                     <span>Play Mini-Game</span>
-                    <img src="img/charizard.png" alt="charizard-primeira-geração-id-006" class="button-icon charizard">
-                </a>
+                    <img src="img/charizard.png" alt="charizard-generationI-id-006" class="button-icon charizard">
+                </button>
             </nav>
 
             <nav class="container-button">
-                <a href="#generation-page" class="landing-page__button primeira-geracao">
+                <button type="button" class="landing-page__button first-generation">
                     Generation I
-                    <img src="img/bulbasaur.png" alt="charizard-primeira-geração-id-006" class="button-icon bulbasaur">
-                </a>
+                    <img src="img/bulbasaur.png" alt="bulbasaur-generationI-id-001" class="button-icon bulbasaur">
+                </button>
 
-                <a href="#generation-page" class="landing-page__button segunda-geracao">
+                <button type="button" class="landing-page__button second-generation">
                     Generation II
-                    <img src="img/cindaquil.png" alt="charizard-primeira-geração-id-006" class="button-icon cyndaquil">
-                </a>
+                    <img src="img/cindaquil.png" alt="cyndaquil-generationII-id-155" class="button-icon cyndaquil">
+                </button>
 
-                <a href="#team-page" class="landing-page__button pokemon-aleatorio">
+                <button type="button" class="landing-page__button pokemon-aleatorio">
                     Discover Your Team
-                    <img src="img/pikachu.png" alt="charizard-primeira-geração-id-006" class="button-icon pikachu">
-                </a>
+                    <img src="img/pikachu.png" alt="pikachu-generationI-id-025" class="button-icon pikachu">
+                </button>
             </nav>
         </div>
     </header>
@@ -69,10 +67,10 @@
             <nav class="searching-page__header">
                 <img src="img/pokemon-logo.png" alt="" class="searching-page__logo">
 
-                <a href="#landing-page" class="back-button">
+                <button type="button" class="back-button">
                     <img src="img/arrow.svg" alt="">
                     Home
-                </a>
+                </button>
 
                 <input type="text" name="" id="inputText" placeholder="Search Pokémon" class="searching-page__input">
 
@@ -81,10 +79,10 @@
                     Random
                 </button>
 
-                <a href="#mini-game" class="searching-page__quiz-button">
+                <button type="button" class="searching-page__quiz-button goTo-Game">
                     <img src="img/pokeball.svg" alt="">
                     Mini-game
-                </a>
+                </button>
             </nav>
 
             <div class="pokemon-input-card type">
@@ -105,7 +103,7 @@
                     </div>
                 </div>
 
-                <div class="about type">
+                <div class="pokemonInfo type">
                     <h3>Base Stats</h3>
 
                     <div class="stats">
@@ -166,7 +164,16 @@
     <section class="generation-page" id="generation-page">
         <div class="container">
 
-            <h2><img src="img/Generation-I.png" alt="" class="generation-page__logo"></h2>
+            <nav class="generation-page__header">
+                <img src="img/Generation-I.png" alt="" class="generation-page__logo">
+                
+                <button type="button" class="back-button">
+                    <img src="img/arrow.svg" alt="">
+                    Home
+                </button>
+
+                <button type="button" id="switchGeneration" class="changeGeneration">Switch to Generation II</button>
+            </nav>
 
             <p class="generation-page__about">The first generation of Pokémon, often referred to as Generation I, was
                 released in Japan in 1996 and internationally in 1998. It introduced a total of 151 Pokémon species,
@@ -175,7 +182,7 @@
                 The first generation games, Pokémon Red, Blue, and Green, were released for the Game Boy and have since
                 become a beloved cultural phenomenon with a lasting impact on gaming and pop culture.
             </p>
-            <button type="button" id="changeGeneration" class="changeGeneration">Change to Generation II</button>
+            
             <div class="generationI">
 
                 <div class="generationI-page__toggle-bar">
@@ -214,10 +221,11 @@
             <nav class="game-page__header">
                 <img src="img/Whos-That-Pokemon.png" alt="" class="game-page__logo">
 
-                <a href="#landing-page" class="back-button">
+                <button type="button" class="back-button">
                     <img src="img/arrow.svg" alt="">
                     Home
-                </a>
+                </button>
+                <button type="button" class="mobileRules">Rules</button>
                 <p class="contadorGame">
                     Score:
                     <span id="contadorGame">0</span>
@@ -241,7 +249,7 @@
                     <br><br>
                 </p>
                 <p class="game-rules-text">Have fun and good luck!</p>
-
+                <button class="close-rules">Close Rules</button>
             </div>
 
             <div id="whosIsThatPokemon">
@@ -259,7 +267,7 @@
                             <span style="color: black;">TYPE 2</span>
                         </div>
                     </div>
-                    <div class="aboutGame type">
+                    <div class="pokemonInfoGame type">
                         <h3>Base Stats</h3>
                         <div class="stats">
                             <h6>HP</h6>
@@ -312,10 +320,10 @@
             <nav class="searching-page__header">
                 <img src="img/Discover-your-Team.png" alt="" class="team-page__logo">
 
-                <a href="#landing-page" class="back-button">
+                <button type="button" class="back-button">
                     <img src="img/arrow.svg" alt="">
                     Home
-                </a>
+                </button>
             </nav>
 
             <p class="team-page__about">Welcome to the Random Team Generator! Here you can press a button to generate a

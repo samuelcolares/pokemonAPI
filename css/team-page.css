@@ -52,13 +52,17 @@
     width: 100%;
 }
 
+.team-page__toggle-bar:disabled{
+    opacity: 0.5;
+}
+
 .pokemon-list3{
     display: grid;
     grid-template-columns: repeat(3, auto);
     row-gap: 30px;
 }
 
-.team-page__toggle-bar.fullsize + .pokemon-list3{
+.pokemon-list3 > .tt{
     animation: opacity 2.5s forwards;
 }
 
@@ -67,5 +71,38 @@
         filter: opacity(0);
     }100%{
         filter: opacity(1);
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    
+    .team-page .container {
+        padding: 0 5%;
+    }
+
+    .team-page__header {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    
+    .team-page__logo{
+        max-width: 250px;
+    }
+
+    .team-page__about {
+        color: white;
+        font-size: 16px;
+        text-align: center;
+        margin: 100px 0;
+    }
+
+    .team-page__toggle-bar{
+        font-size: 20px;
+    }
+
+    .pokemon-list3{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 30px;
     }
 }
