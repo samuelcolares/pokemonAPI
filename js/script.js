@@ -524,6 +524,7 @@ let contagemAcertos = 0
 let contagemErros = 0
 function pokemonGame(data) {
     //Variáveis para facilitar o entendimento
+    imageGame.src = data.sprites.other["official-artwork"].front_default
     const nomePokemon = data.name
     const nomePokemonFormatado = formatName(nomePokemon)
     const tipoPrincipalPokemon = data.types[0].type.name
@@ -533,6 +534,7 @@ function pokemonGame(data) {
     const idPokemonOutput = pokemonNameIdGame.firstChild.nextElementSibling.nextElementSibling
 
     const dadosInput = inputGame.value.toLowerCase()
+    console.log(inputGame.value)
 
     // Verificação para checar se o valor entrado no input é igual ao nome do pokemon
     if (dadosInput === nomePokemon || contagemErros > 3) {
@@ -571,7 +573,7 @@ function pokemonGame(data) {
     } else {
         contagemErros++
     }
-    imageGame.src = data.sprites.other["official-artwork"].front_default
+    
     if (contagemErros > 1 && contagemErros <= 4) {
         inputGame.classList.add('wrongGuess')
         setTimeout(() => {
@@ -591,6 +593,9 @@ inputGame.addEventListener('keypress', (e) => {
 buttonGame.addEventListener('click', () => {
     buttonGame.innerText = `Restart Game`
     imageGame.classList.remove('exibir')
+    setTimeout(() => {
+        imageGame.classList.remove('exibir')
+    }, 10);
     contagemErros = 0
     gameRandomNumber()
     original(pokemonCardGame, pokemonNameIdGame, pokemonTypeGame)
@@ -663,3 +668,4 @@ randomPokemonButton.onclick = (e) => {
     }
     e.target.innerText = 'Change Team'
 }
+
