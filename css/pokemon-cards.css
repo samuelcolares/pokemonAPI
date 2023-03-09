@@ -110,6 +110,7 @@
 .gameIMG {
     filter: brightness(0);
     -webkit-filter: brightness(0);
+    transition: filter 0.01s ease-out;
 }
 .loadIMG:hover {
     transition: all 1s;
@@ -126,7 +127,7 @@
 }
 
 .gameIMG.exibir {
-    transition: all 300ms ease-out;
+    transition: filter 300ms ease-out;
     filter: brightness(1);
     -webkit-filter: brightness(1);
     cursor: initial;
